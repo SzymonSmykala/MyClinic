@@ -14,4 +14,5 @@ public interface PatientDAO {
     List<Patient> getPatient();
 
 
+    void addPatient(Patient patient);
 }

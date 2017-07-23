@@ -19,6 +19,10 @@
 </head>
 <body>
 
+<h2>
+    <a href="addPatient">Add patient</a>
+
+</h2>
 
 <div class="table-users">
     <div class="header">Patients List</div>

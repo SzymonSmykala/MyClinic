@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.jws.WebParam;
 import java.util.List;
@@ -30,5 +30,21 @@ public class PatientController {
 
         return "patientsList";
     }
+    @GetMapping("/addPatient")
+    public String addPatient(Model model){
+        Patient patient = new Patient();
+        model.addAttribute("patient", patient);
+        return "addPatient";
+    }
+    @PostMapping("/savePatient")
+    public String saveNewPatient(@ModelAttribute Patient patient){
+
+        System.out.println("SAVE PATIENT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        patientService.addPatient(patient);
+
+        return "redirect:/patient/list";
+    }
+
+
 
 }

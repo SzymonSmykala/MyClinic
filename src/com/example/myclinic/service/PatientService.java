@@ -11,4 +11,5 @@ public interface PatientService {
     public List<Patient> getPatients();
 
 
+    void addPatient(Patient patient);
 }

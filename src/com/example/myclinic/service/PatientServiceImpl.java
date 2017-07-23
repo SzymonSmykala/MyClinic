@@ -23,6 +23,12 @@ public class PatientServiceImpl implements PatientService {
     public List<Patient> getPatients() {
         return patientDAO.getPatient();
     }
+
+    @Override
+    @Transactional
+    public void addPatient(Patient patient) {
+        patientDAO.addPatient(patient);
+    }
 }
 
 

@@ -32,5 +32,13 @@ public class PatientDAOImpl implements PatientDAO {
         return patientList;
     }
 
+    @Override
+    @Transactional
+    public void addPatient(Patient patient) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(patient);
+
+    }
+
 
 }

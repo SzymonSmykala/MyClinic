@@ -1,6 +1,10 @@
 # MyClinic
 My Clinic application using Spring, Spring-MVC and Hibernate.
 
+**Installing MySQL**:
+1. Download MySQL Community [https://dev.mysql.com/downloads/mysql/]
+2. Install MySQL
+3. Use SQL scripts from starter files folder _\my-clinic\web\starterFiles_
 
 **Configure Tomcat in IntelliJ IDEA:**
 1.	Edit Configuration -> Select Green ‘+’ on left upper corner
@@ -23,3 +27,4 @@ My Clinic application using Spring, Spring-MVC and Hibernate.
 **THEN**
 1.	Go to Artifacts
 2.	Click FIX button and add all missing artifacts
+
