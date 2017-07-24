@@ -1,6 +1,7 @@
 package com.example.myclinic.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 /**
  * Created by Szymon on 23.07.2017.

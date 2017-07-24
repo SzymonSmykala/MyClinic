@@ -44,6 +44,8 @@
 
     </table>
 </div>
-
+<h2>
+    <a href="${pageContext.request.contextPath}/patient/list">Back to Patients List</a>
+</h2>
 </body>
 </html>

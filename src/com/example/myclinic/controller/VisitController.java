@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.jws.WebParam;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -59,6 +60,12 @@ public class VisitController {
         visitService.addVisit(visit);
         return "redirect:/visit/list";
     }
+    @GetMapping("/showVisits")
+    public String showVisits(@RequestParam("patientId") int patientId, Model model){
+        List<Visit> visits = visitService.getVisitsByPatientId(patientId);
 
+        model.addAttribute("visitsList", visits);
+        return "patientVisitsList";
+    }
 
 }

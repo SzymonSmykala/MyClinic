@@ -16,6 +16,7 @@
           <element id="file-copy" path="$PROJECT_DIR$/lib/additionalLibraries/c3p0-0.9.5.2.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/additionalLibraries/hibernate-c3p0-5.2.10.Final.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/additionalLibraries/jstl-1.2 (2).jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/additionalLibraries/validation-api-1.0.0.GA (1).jar" />
         </element>
       </element>
     </root>

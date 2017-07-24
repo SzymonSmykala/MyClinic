@@ -36,4 +36,12 @@ public class VisitDAOImpl implements VisitDAO {
         Session session = sessionFactory.getCurrentSession();
         session.save(visit);
     }
+
+    @Override
+    @Transactional
+    public List<Visit> getVisitsByPatientId(int patientId) {
+        Session session = sessionFactory.getCurrentSession();
+        List<Visit> visitList = session.createQuery("from Visit visit where visit.patientId = " + patientId).list();
+        return visitList;
+    }
 }

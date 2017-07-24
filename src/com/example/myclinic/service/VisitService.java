@@ -13,4 +13,6 @@ public interface VisitService {
 
 
     void addVisit(Visit visit);
+
+    List<Visit> getVisitsByPatientId(int patientId);
 }

@@ -29,5 +29,10 @@ public class VisitServiceImpl implements VisitService {
         visitDAO.addVisit(visit);
     }
 
+    @Override
+    public List<Visit> getVisitsByPatientId(int patientId) {
+        return visitDAO.getVisitsByPatientId(patientId);
+    }
+
 
 }

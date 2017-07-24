@@ -13,4 +13,6 @@ public interface VisitDAO {
     List<Visit> getVisits();
 
     void addVisit(Visit visit);
+
+    List<Visit> getVisitsByPatientId(int patientId);
 }

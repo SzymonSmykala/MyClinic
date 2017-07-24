@@ -18,6 +18,7 @@ My Clinic application using Spring, Spring-MVC and Hibernate.
 3.	hibernate-c3p0
 4.	mchange-commons-java
 5.	jstl
+6. javax.validation
 
 **Adding libraries in IntelliJ IDEA:**
 1.	Project Structure -> Modules
