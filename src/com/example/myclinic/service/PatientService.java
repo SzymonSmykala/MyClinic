@@ -14,4 +14,6 @@ public interface PatientService {
     void addPatient(Patient patient);
 
     Patient getPatient(int patientId);
+
+    List<Patient> getPatientsByLastName(String lastName);
 }

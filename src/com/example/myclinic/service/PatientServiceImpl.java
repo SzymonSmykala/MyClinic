@@ -34,6 +34,11 @@ public class PatientServiceImpl implements PatientService {
     public Patient getPatient(int patientId) {
         return patientDAO.getPatient(patientId);
     }
+
+    @Override
+    public List<Patient> getPatientsByLastName(String lastName) {
+        return patientDAO.getPatientsByLastName(lastName);
+    }
 }
 
 

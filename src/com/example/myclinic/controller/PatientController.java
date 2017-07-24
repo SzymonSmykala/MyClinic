@@ -29,7 +29,8 @@ public class PatientController {
 
         List<Patient> patientList = patientService.getPatients();
         model.addAttribute("patientsList", patientList);
-
+        Patient patient = new Patient();
+        model.addAttribute("patient",patient);
         return "patientsList";
     }
     @GetMapping("/addPatient")
@@ -46,7 +47,12 @@ public class PatientController {
         return "redirect:/patient/list";
     }
 
-
+    @GetMapping("/searchPatient")
+    public String searchPatient(@ModelAttribute Patient patient, Model model){
+     List<Patient> patientList = patientService.getPatientsByLastName(patient.getLastName());
+     model.addAttribute("patientList", patientList);
+     return "searchPatient";
+    }
 
 
 

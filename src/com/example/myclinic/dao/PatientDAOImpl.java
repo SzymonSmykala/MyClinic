@@ -50,5 +50,15 @@ public class PatientDAOImpl implements PatientDAO {
         return patient;
     }
 
+    @Override
+    @Transactional
+    public List<Patient> getPatientsByLastName(String lastName) {
+        Session session = sessionFactory.getCurrentSession();
+        List<Patient> patientList =  session.createQuery("from Patient p where p.lastName LIKE '"+ lastName + "%'").list();
+
+        return patientList;
+
+    }
+
 
 }

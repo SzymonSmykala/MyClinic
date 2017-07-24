@@ -17,4 +17,6 @@ public interface PatientDAO {
     void addPatient(Patient patient);
 
      public Patient getPatient(int patientId);
+
+    List<Patient> getPatientsByLastName(String lastName);
 }

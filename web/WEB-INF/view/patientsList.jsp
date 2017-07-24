@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <html>
 <head>
@@ -24,6 +25,12 @@
     <a href="${pageContext.request.contextPath}/visit/list">Visits</a>
 
 </h2>
+
+<form:form action="searchPatient" modelAttribute="patient" method="get">
+    <label>Search patient: </label><br><br>
+    <form:input path="lastName"/>
+    <input type="submit" value="Submit"/>
+</form:form>
 
 <div class="table-users">
     <div class="header">Patients List</div>
