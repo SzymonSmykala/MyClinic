@@ -38,8 +38,6 @@ public class PatientController {
     }
     @PostMapping("/savePatient")
     public String saveNewPatient(@ModelAttribute Patient patient){
-
-        System.out.println("SAVE PATIENT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         patientService.addPatient(patient);
 
         return "redirect:/patient/list";

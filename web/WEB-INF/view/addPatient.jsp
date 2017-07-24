@@ -10,13 +10,20 @@
 <html>
 <head>
     <title>Add Patient</title>
+
+    <link type="text/css"
+          rel="stylesheet"
+          href="${pageContext.request.contextPath}/resources/css/tableStyle.css"/>
+
 </head>
 <body>
 
-<h2>Add Patient</h2>
+
 
 <form:form action="savePatient" modelAttribute="patient" method="post">
 
+    <div class="table-users">
+        <div class="header">Add Patient</div>
     <table>
 
         <tr>
@@ -45,9 +52,11 @@
 
 
     </table>
-
+    </div>
 
 </form:form>
-
+<h2>
+    <a href="${pageContext.request.contextPath}/patient/list">Back to Patients List</a>
+</h2>
 </body>
 </html>

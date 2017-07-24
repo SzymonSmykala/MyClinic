@@ -20,7 +20,8 @@
 <body>
 
 <h2>
-    <a href="addPatient">Add patient</a>
+    <a href="addPatient">Add patient</a><br>
+    <a href="${pageContext.request.contextPath}/visit/list">Visits</a>
 
 </h2>
 
@@ -33,9 +34,16 @@
         <th>Last Name</th>
         <th>Email</th>
         <th>Phone Number</th>
+        <th>Action</th>
     </tr>
 
     <c:forEach var="patient" items="${patientsList}">
+
+        <!-- Construct link for new visit with patientId -->
+        <c:url var="newVisit" value="/visit/newVisit">
+            <c:param name="patientId" value="${patient.id}"/>
+        </c:url>
+
 
         <tr>
             <td>${patient.id}</td>
@@ -43,6 +51,7 @@
             <td>${patient.lastName}</td>
             <td>${patient.email}</td>
             <td>${patient.phoneNumber}</td>
+           <td> <a href="${newVisit}">New Visit</a></td>
         </tr>
     </c:forEach>
 
