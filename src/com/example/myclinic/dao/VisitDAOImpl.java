@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.management.Query;
 import java.util.List;
 
 /**
@@ -43,5 +44,14 @@ public class VisitDAOImpl implements VisitDAO {
         Session session = sessionFactory.getCurrentSession();
         List<Visit> visitList = session.createQuery("from Visit visit where visit.patientId = " + patientId).list();
         return visitList;
+    }
+
+    @Override
+    @Transactional
+    public void deleteVisit(int theId) {
+        Session session = sessionFactory.getCurrentSession();
+        Visit visit = session.get(Visit.class, theId);
+        session.delete(visit);
+
     }
 }

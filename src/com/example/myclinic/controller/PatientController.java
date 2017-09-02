@@ -2,6 +2,7 @@ package com.example.myclinic.controller;
 
 import com.example.myclinic.entity.Patient;
 import com.example.myclinic.service.PatientService;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,6 +34,14 @@ public class PatientController {
         model.addAttribute("patient",patient);
         return "patientsList";
     }
+
+    @RequestMapping("/list/delete")
+    public String deletePatient(@RequestParam("patientId") int theId, Model model){
+
+        patientService.deletePatient(theId);
+        return "redirect:/patient/list";
+    }
+
     @GetMapping("/addPatient")
     public String addPatient(Model model){
         Patient patient = new Patient();
@@ -53,6 +62,8 @@ public class PatientController {
      model.addAttribute("patientList", patientList);
      return "searchPatient";
     }
+
+
 
 
 

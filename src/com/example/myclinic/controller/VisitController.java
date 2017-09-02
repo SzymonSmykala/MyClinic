@@ -39,6 +39,13 @@ public class VisitController {
         model.addAttribute("visitList", visitList);
         return "visitsList";
     }
+
+    @GetMapping("/list/delete")
+    public String deleteVisit(@RequestParam("visitId") int theId, Model model){
+        visitService.deleteVisit(theId);
+        return "redirect:/visit//list";
+    }
+
     @GetMapping("/newVisit")
     public String newVisit(@RequestParam("patientId") int patientId, Model model){
 

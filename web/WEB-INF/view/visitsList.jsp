@@ -28,16 +28,22 @@
             <th>Date</th>
             <th>Patient Id</th>
             <th>Comment</th>
+            <th>Action</th>
 
         </tr>
 
         <c:forEach var="visit" items="${visitList}">
+
+            <c:url var="deleteLink" value="/visit/list/delete">
+                <c:param name="visitId" value="${visit.id}"/>
+            </c:url>
 
             <tr>
                 <td>${visit.id}</td>
                 <td>${visit.date}</td>
                 <td> ${visit.patientId}</td>
                 <td>${visit.comment}</td>
+                <td><a href="${deleteLink}"> Delete </a> </td>
             </tr>
         </c:forEach>
 

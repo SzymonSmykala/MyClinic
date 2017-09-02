@@ -16,4 +16,6 @@ public interface PatientService {
     Patient getPatient(int patientId);
 
     List<Patient> getPatientsByLastName(String lastName);
+
+    void deletePatient(int theId);
 }

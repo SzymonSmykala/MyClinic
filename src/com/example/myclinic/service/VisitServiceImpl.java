@@ -34,5 +34,10 @@ public class VisitServiceImpl implements VisitService {
         return visitDAO.getVisitsByPatientId(patientId);
     }
 
+    @Override
+    public void deleteVisit(int theId) {
+        visitDAO.deleteVisit(theId);
+    }
+
 
 }

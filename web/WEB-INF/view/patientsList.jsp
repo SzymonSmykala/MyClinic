@@ -55,6 +55,9 @@
             <c:param name="patientId" value="${patient.id}"/>
         </c:url>
 
+        <c:url var="deleteLink" value="/patient/list/delete">
+            <c:param name="patientId" value="${patient.id}"/>
+        </c:url>
 
         <tr>
             <td>${patient.id}</td>
@@ -62,7 +65,7 @@
             <td>${patient.lastName}</td>
             <td>${patient.email}</td>
             <td>${patient.phoneNumber}</td>
-           <td> <a href="${newVisit}">New Visit</a> | <a href="${showVisits}">Show Visits</a> </td>
+           <td> <a href="${newVisit}">New Visit</a> | <a href="${showVisits}">Show Visits</a> | <a href="${deleteLink}">Delete</a>  </td>
         </tr>
     </c:forEach>
 

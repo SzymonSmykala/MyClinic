@@ -19,4 +19,6 @@ public interface PatientDAO {
      public Patient getPatient(int patientId);
 
     List<Patient> getPatientsByLastName(String lastName);
+
+    void deletePatient(int theId);
 }
